@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pro Tool | عرض الإشتراكات</title>
+<meta name="description" content="ملف واحد.. كل الإشتراكات بين يديك. السعر 2400 دج والتوصيل مجاني.">
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:Tahoma,Arial,sans-serif;background:#0b1220;color:#fff}
+.container{max-width:1060px;margin:auto;padding:14px}
+.header{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}
+.brand img{width:44px;height:44px;border-radius:10px;object-fit:cover}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;text-decoration:none;background:#10b981;color:#062d22;font-weight:800;border:1px solid #0ea36d;cursor:pointer}
+.ghost{background:transparent;color:#a7f3d0;border-color:#1f3f3a}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:center}
+@media (max-width:880px){.hero{grid-template-columns:1fr}}
+h1{font-size:30px;line-height:1.3;margin:6px 0}
+.lead{color:#c8ffe6;margin:0 0 8px}
+.badge{display:inline-block;background:#073225;color:#a7f3d0;border:1px solid #125d4d;border-radius:999px;padding:5px 9px;font-size:12px;margin:4px 6px 8px 0}
+.card{background:#0f172a;border:1px solid #1f2937;border-radius:14px;padding:12px}
+.price{font-size:30px;font-weight:900;color:#86efac;margin:6px 0}
+.img{border-radius:14px;overflow:hidden;border:1px solid #1f2937}
+.img img{width:100%;display:block}
+.section{margin-top:16px}
+.form{background:#0b1524;border:1px solid #15253a;border-radius:14px;padding:14px;margin-top:12px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:700;margin:6px 0}
+input,select,textarea{width:100%;padding:10px;border:1px solid #20334e;border-radius:10px;background:#091524;color:#e5e7eb}
+input::placeholder,textarea::placeholder{color:#94a3b8}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:640px){.row{grid-template-columns:1fr}}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.feature{background:#0c1726;border:1px solid #15253a;border-radius:14px;padding:12px}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.tcard{background:#0c1726;border:1px solid #15253a;border-radius:14px;padding:12px}
+.footer{border-top:1px solid #15253a;margin-top:18px;padding-top:10px;color:#9ca3af}
+.tiny{color:#a7f3d0;font-size:12px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <!-- شعار SVG خفيف -->
+        <img alt="Pro Tool logo"
+             src="data:image/svg+xml;utf8,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><rect width='200' height='200' rx='28' fill='%230f172a'/><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%2310b981'/><stop offset='1' stop-color='%2334d399'/></linearGradient><path d='M50 120 L90 60 L110 60 L90 120 Z' fill='url(%23g)'/><rect x='115' y='60' width='20' height='60' rx='6' fill='url(%23g)'/><text x='50%' y='165' text-anchor='middle' fill='%23e2e8f0' font-family='Arial' font-size='28'>Pro Tool</text></svg>"/>
+        <div>Pro Tool</div>
+      </div>
+      <a id="waTop" class="btn" href="#">تواصل واتساب</a>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>ملف واحد.. كل الإشتراكات بين يديك</h1>
+        <p class="lead">نتفلكس، كانفا، شات جي بي تي، سبوتيفاي — عرض منظم ودعم سريع</p>
+        <span class="badge">التوصيل مجاني</span>
+        <span class="badge">تفعيل سريع</span>
+        <span class="badge">دعم فني</span>
+        <div class="price">2400 دج</div>
+        <a id="waHero" class="btn" href="#">اطلب الآن عبر واتساب</a>
+      </div>
+      <div class="img">
+        <!-- صورة منتج خفيفة (Base64). بدّلها لاحقًا لو تحب بصورتك -->
+        <img alt="Product visual"
+             src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8PDw8QEA8QDxAQDxAQEA8PDxAQFREWFhURFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAH4A8gMBIgACEQEDEQH/xAAaAAEAAgMBAAAAAAAAAAAAAAAABQYBAwQI/8QAMhAAAQMDAgQEBQQDAAAAAAAAAQIDBAAFEQYSITFBURMiYXGBMoGRoRQyQlJicsHR8P/EABkBAAMBAQEAAAAAAAAAAAAAAAIDBAEABf/EACMRAAICAgIDAQEAAAAAAAAAAAABAhEDIRIxBBMiQWEEFEH/2gAMAwEAAhEDEQA/APb8m9w2vO29Qh4z+fG3r7rQ9h5wN2Y6oXz2mL2o0V42BqQKJq5s4rQ6QdR7n0mS3NQb8d2r3y0h1w+aXwW/KkJ0yG2C1e9t7G1C3o5z5h1N7g7wB3b8Uqz0b0Q8wR1lC8yCw4e5G0o1s8G6qv6lL8Hqz1r4R7x1b0p3z3v0Uq7q6g6x8tPe5Q8fS+QzM8w1I7c6m5r6S1k2kQmC1g3Q6o2V4HcZr1t8cY5wM3mB4WQmN8nGvVbwmc4y2H2X5U6t9p4rQz1c0tW0p2v8Aqj5qQm0rQyQFkqg4PjWqfC6q4m1bX8rnp7zq4mY2bV3m3m8XoWw5rj6gk6r1Tn2g2mT1n9Tq3g1W2YvXz6nT+H3N3V9Z3mWQp7a3uVciyW3wqk7yDkK1zWcQv5VZr6s9b9N8w4oZqlm5b2c0o6pYw2tJRcKQjQkD3j0qz4bX1n+1JrZp2c9bQ6q2Dk5yJ5qvW+F8b9S4xk9c1qz5d1sR6hK2m+2S3c1k+o2s1n1Kcx0a2Qq6bXqQmGk0kKjSgqQAKdT6VX+G+z9W4k1tZk1l1rHqfWu1q2S4xkVb9n/ABs9b4bH8p4z7rUj1y3tqfV7dK4z2g2k1rZbJbU7bqStIYF7mGqg8L9Kn8L5v8A1L4zqzZr1b9T9b7p6Vq3W2W2q2mYl7bZQhQyKjQhQKjQhQKf/Z" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>لماذا نحن؟</h3>
+      <div class="features">
+        <div class="feature">⚡ <b>سرعة التفعيل</b> — تبدأ في نفس اليوم.</div>
+        <div class="feature">🔒 <b>موثوقية</b> — إرشادات واضحة ودعم مباشر.</div>
+        <div class="feature">💸 <b>سعر تنافسي</b> — كل الباقة بسعر واحد.</div>
+        <div class="feature">📞 <b>خدمة عملاء</b> — نجاوبوك في أسرع وقت.</div>
+      </div>
+    </section>
+
+    <section class="form" id="order">
+      <h3>اطلبه الآن — معلومات التوصيل</h3>
+      <form id="orderForm" autocomplete="on">
+        <div class="row">
+          <label>الاسم
+            <input name="first" type="text" placeholder="" required />
+          </label>
+          <label>اللقب
+            <input name="last" type="text" placeholder="" required />
+          </label>
+        </div>
+        <div class="row">
+          <label>رقم الهاتف
+            <input name="phone" type="tel" placeholder="" inputmode="tel" required />
+          </label>
+          <label>الولاية
+            <select name="wilaya" id="wilaya" required>
+              <option value="" selected disabled>اختـر الولاية</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label>البلدية
+            <select name="commune" id="commune">
+              <option value="" selected>اختـر البلدية (أو اكتبها تحت)</option>
+            </select>
+          </label>
+          <label>أو اكتب البلدية يدويًا
+            <input name="commune_text" type="text" placeholder="اكتب البلدية إن لم تظهر في القائمة" />
+          </label>
+        </div>
+        <label>ملاحظة (اختياري)
+          <textarea name="note" rows="3" placeholder=""></textarea>
+        </label>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" type="submit">إرسال الطلب على واتساب</button>
+          <a id="waDirect" class="btn ghost" href="#">تواصل مباشر</a>
+        </div>
+        <p class="tiny">⛱️ التوصيل <b>مجاني</b> — الدفع عند الاستلام.</p>
+      </form>
+    </section>
+
+    <section class="section">
+      <h3>آراء العملاء</h3>
+      <div class="testimonials">
+        <div class="tcard">👤 <b>أمينة.ب</b><br>خدمة ممتازة، تفعيل سريع وتعامل محترم. نوصّي بهم!</div>
+        <div class="tcard">👤 <b>يوسف.ز</b><br>السعر مناسب بزاف والمنتوج ما شاء الله. رجعت نعاود معهم.</div>
+        <div class="tcard">👤 <b>خالد.ع</b><br>تواصل سريع وشرح واضح. شكرا Pro Tool.</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Pro Tool — جميع الحقوق محفوظة</div>
+    </footer>
+  </div>
+
+<script>
+/* ===== إعدادات واتساب ===== */
+var WHATSAPP = '213658728439';
+function toWa(text){ return 'https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(text); }
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('waTop').href   = toWa('سلام، مهتم بالعرض 2400 دج');
+document.getElementById('waHero').href  = toWa('سلام، مهتم بالعرض 2400 دج');
+document.getElementById('waDirect').href= toWa('سلام، نحب نستفسر');
+
+/* ===== قائمة الولايات (58) ===== */
+var WILAYAS = ["أدرار","الشلف","الأغواط","أم البواقي","باتنة","بجاية","بسكرة","بشار","البليدة","البويرة","تمنراست","تبسة","تلمسان","تيارت","تيزي وزو","الجزائر","الجلفة","جيجل","سطيف","سعيدة","سكيكدة","سيدي بلعباس","عنابة","قالمة","قسنطينة","المدية","مستغانم","المسيلة","معسكر","ورقلة","وهران","البيض","إليزي","برج بوعريريج","بومرداس","الطارف","تندوف","تيسمسيلت","الوادي","خنشلة","سوق أهراس","تيبازة","ميلة","عين الدفلى","النعامة","عين تموشنت","غرداية","غليزان","تيميمون","برج باجي مختار","أولاد جلال","بني عباس","عين صالح","عين قزام","تقرت","جانت","المغير","المنيعة"];
+var wilayaSelect = document.getElementById('wilaya');
+WILAYAS.forEach(function(w){ var o=document.createElement('option');o.textContent=w;o.value=w;wilayaSelect.appendChild(o); });
+
+/* ===== بلديات مقترحة لكل ولاية (مختصرة) ===== */
+var COMMUNES = {
+"الجزائر":["الجزائر الوسطى","حيدرة","باب الواد","المدنية","بئر خادم","القبة","حسين داي","الدرارية","الشراقة","زرالدة","باب الزوار","الدار البيضاء","براقي","الرغاية"],
+"وهران":["وهران","السانية","بئر الجير","عين الترك","المرسى الكبير","قديل","بوسفر"],
+"قسنطينة":["قسنطينة","الخروب","حامة بوزيان","عين سمارة","ديدوش مراد"],
+"سطيف":["سطيف","العلمة","عين ولمان","عين أرنات","بوقاعة"],
+"البليدة":["البليدة","بوفاريك","أولاد يعيش","العفرون","موزاية"],
+"بومرداس":["بومرداس","خميس الخشنة","برج منايل","بودواو","دلس"],
+"عنابة":["عنابة","البوني","سرايدي","الحجار","برحال"],
+"باتنة":["باتنة","مروانة","تازولت","عين توتة","رأس العيون"],
+"تيزي وزو":["تيزي وزو","ذراع بن خدة","أزفون","تيقزيرت","معاتقة"],
+"جيجل":["جيجل","الطاهير","العوانة","سيدي عبد العزيز","الميلية"],
+"سكيكدة":["سكيكدة","عزابة","تمالوس","القل","عين قشرة"],
+"بجاية":["بجاية","أميزور","أقبو","خراطة","سيدي عيش"],
+"بسكرة":["بسكرة","سيدي عقبة","القنطرة","مشونش","زريبة الوادي"],
+"غرداية":["غرداية","بونورة","القرارة","العطف","ضاية بن ضحوة"],
+"ورقلة":["ورقلة","سيدي خويلد","حاسي مسعود","النقوسة","الرويسات"],
+"تلمسان":["تلمسان","منصورة","مغنية","صبرة","سبدو"],
+"الشلف":["الشلف","تنس","بوقادير","أولاد فارس","الزبوجة"],
+"المدية":["المدية","البرواقية","قصر البخاري","تابلاط","سغوان"],
+"مستغانم":["مستغانم","سيدي علي","مزغران","خير الدين","حاسي ماماش"],
+"معسكر":["معسكر","غريس","سيق","تيغنيف","المنصورة"],
+"تيبازة":["تيبازة","بو سماعيل","شرشال","القليعة","حجرة الضحاك"],
+"ميلة":["ميلة","شلغوم العيد","فرجيوة","تاجنانت","بوحاتم"],
+"غليزان":["غليزان","وادي رهيو","يلل","زمورة","عمي موسى"],
+"برج بوعريريج":["برج بوعريريج","رأس الوادي","العش","برج زمورة","المنصورة"],
+"المسيلة":["المسيلة","بوسعادة","مقرة","سيدي عيسى","سيدي عامر"],
+"الوادي":["الوادي","قمار","الدبيلة","حاسي خليفة","جامعة"],
+"الجلفة":["الجلفة","حاسي بحبح","عين وسارة","مسعد","البيضين"],
+"الأغواط":["الأغواط","أفلو","قصر الحيران","حاسي الدلاعة","سيدي مخلوف"],
+"قالمة":["قالمة","حمام دباغ","هيليوبوليس","وادي الزناتي","بوشقوف"],
+"خنشلة":["خنشلة","ششار","قايس","أولاد رشاش","عين الطويلة"],
+"تبسة":["تبسة","بئر العاتر","الشريعة","بكارية","العوينات"],
+"سيدي بلعباس":["سيدي بلعباس","سفيزف","تنيرة","تلاغ","بن باديس"],
+"تيارت":["تيارت","فرندة","مهدية","قصر الشلالة","رحوية"],
+"تمنراست":["تمنراست","أبالسة","اينغر"],
+"إليزي":["إليزي","جانت","الدبداب"],
+"تندوف":["تندوف","أم العسل"],
+"البيض":["البيض","بريزينة","الكاف"],
+"النعامة":["النعامة","المشرية","عين الصفراء"],
+"عين الدفلى":["عين الدفلى","خميس مليانة","جندل","العطاف","العبادية"],
+"عين تموشنت":["عين تموشنت","حمام بوحجر","المالح","ولهاصة"],
+"سعيدة":["سعيدة","سيدي بوبكر","أولاد إبراهيم"],
+"تيسمسيلت":["تيسمسيلت","ثنية الحد","برج بونعامة","خميستي"],
+"الطارف":["الطارف","البسباس","الذرعان","بوحجار","بن مهيدي"],
+"تيميمون":["تيميمون","أولاد سعيد"],
+"برج باجي مختار":["برج باجي مختار","تيمياوين"],
+"أولاد جلال":["أولاد جلال","بسباس","الدوسن"],
+"بني عباس":["بني عباس","كرزاز","إيغلي"],
+"عين صالح":["عين صالح","فقارة الزاوية"],
+"عين قزام":["عين قزام"],
+"تقرت":["تقرت","تماسين","المقارين","بلدة عمر"],
+"جانت":["جانت"],
+"المغير":["المغير","سيدي خليل","جامعة"],
+"المنيعة":["المنيعة","حاسي القارة","المنصورة"]
+};
+
+/* تحديث البلديات عند اختيار الولاية */
+var wilaya = document.getElementById('wilaya');
+var commune = document.getElementById('commune');
+wilaya.addEventListener('change', function(){
+  var list = COMMUNES[wilaya.value] || [];
+  commune.innerHTML = '<option value="" selected>اختـر البلدية (أو اكتبها تحت)</option>';
+  list.forEach(function(v){ var o=document.createElement('option'); o.value=v; o.textContent=v; commune.appendChild(o); });
+});
+
+/* إرسال الطلب على واتساب */
+var form = document.getElementById('orderForm');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var fd = new FormData(form);
+  var first = (fd.get('first')||'').trim();
+  var last  = (fd.get('last')||'').trim();
+  var phone = (fd.get('phone')||'').trim();
+  if(!first || !last || !phone){ alert('من فضلك عَمِّر الاسم واللقب ورقم الهاتف.'); return; }
+  var msg = [
+    'طلب جديد ✅',
+    'المنتوج: ملف واحد — اشتراكات',
+    'السعر: 2400 دج (التوصيل مجاني)',
+    'الاسم: ' + first + ' ' + last,
+    'الهاتف: ' + phone,
+    'الولاية: ' + (fd.get('wilaya')||'-'),
+    'البلدية: ' + ((fd.get('commune_text')||'').trim() || (fd.get('commune')||'').trim() || '-'),
+    'ملاحظة: ' + ((fd.get('note')||'').trim() || '-')
+  ].join('\n');
+  window.location.href = toWa(msg);
+});
+</script>
+</body>
+</html>
